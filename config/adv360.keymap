@@ -78,11 +78,11 @@
 
         symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans     &trans         &trans        &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans     &kp LS(LPAR)   &kp LS(LBRC)  &kp LBKT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp RCTRL  &kp LS(UNDER)  &kp EQUAL     &trans    &trans  &kp LS(DLLR)
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans     &kp LS(RPAR)   &kp LS(RBRC)  &kp RBKT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans             &trans         &trans        &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans           &trans         &trans        &trans     &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &kp AT_SIGN      &kp LS(LPAR)   &kp LS(LBRC)  &kp LBKT   &kp ASTERISK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp RCTRL        &kp LS(UNDER)  &kp EQUAL     &kp MINUS  &kp PLUS      &kp LS(DLLR)
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &kp EXCLAMATION  &kp LS(RPAR)   &kp LS(RBRC)  &kp RBKT   &trans        &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                   &trans         &trans        &trans     &trans        &trans
             >;
         };
     };
