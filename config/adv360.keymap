@@ -89,7 +89,7 @@
 &trans  &trans        &trans            &trans          &trans            &trans             &trans                                                    &trans                    &trans           &trans         &trans        &trans     &trans        &trans
 &trans  &trans        &trans            &trans          &trans            &trans             &kp LG(LS(NUMBER_4))                                      &kp LG(LS(LC(NUMBER_4)))  &kp AT_SIGN      &kp LS(LPAR)   &kp LS(LBRC)  &kp LBKT   &kp ASTERISK  &trans
 &trans  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LC(LA(ENTER))  &kp LA(LC(LEFT))      &trans  &trans      &trans  &trans  &kp LC(LA(RIGHT))         &kp RCTRL        &kp LS(UNDER)  &kp EQUAL     &kp MINUS  &kp PLUS      &kp LS(DLLR)
-&trans  &trans        &trans            &kp LG(LS(C))   &trans            &trans                                           &trans      &trans                                    &kp EXCLAMATION  &kp LS(RPAR)   &kp LS(RBRC)  &kp RBKT   &trans        &trans
+&trans  &trans        &trans            &kp LG(LS(C))   &trans            &kp BACKSPACE                                    &trans      &trans                                    &kp EXCLAMATION  &kp LS(RPAR)   &kp LS(RBRC)  &kp RBKT   &trans        &trans
 &trans  &trans        &trans            &trans          &trans                               &trans                &trans  &trans      &trans  &trans  &trans                                     &trans         &trans        &trans     &trans        &trans
             >;
         };
