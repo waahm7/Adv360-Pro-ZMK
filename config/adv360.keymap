@@ -86,11 +86,11 @@
 
         personal {
             bindings = <
-&trans  &trans             &trans             &trans          &trans             &trans             &trans                                                    &trans                    &trans            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH           &trans         &trans
-&trans  &trans             &kp LG(LC(LS(W)))  &kp LG(ESCAPE)  &kp LG(LS(LC(R)))  &kp LG(LC(LS(T)))  &kp LG(LS(NUMBER_4))                                      &kp LG(LS(LC(NUMBER_4)))  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp ASTERISK   &kp PIPE
-&trans  &kp LEFT_ALT       &kp LEFT_COMMAND   &kp LEFT_SHIFT  &kp LEFT_CONTROL   &kp LC(LG(LS(G)))  &kp LA(LC(LEFT))      &trans  &trans      &trans  &trans  &kp LC(LA(RIGHT))         &kp CARET         &kp UNDERSCORE        &kp EQUAL              &kp MINUS          &kp PLUS       &kp DOLLAR
-&trans  &kp LC(LA(ENTER))  &trans             &kp LG(LS(C))   &kp LG(LC(LS(V)))  &kp BACKSPACE                                    &trans      &trans                                    &kp AT_SIGN       &kp EXCLAMATION       &kp LESS_THAN          &kp GREATER_THAN   &kp AMPERSAND  &trans
-&trans  &trans             &trans             &trans          &trans                                &trans                &trans  &trans      &trans  &trans  &trans                                      &trans                &trans                 &trans             &trans         &trans
+&trans  &trans             &trans             &trans            &trans             &trans             &trans                                                    &trans                    &trans            &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH           &trans         &trans
+&trans  &trans             &kp LG(LC(LS(W)))  &kp LG(ESCAPE)    &kp LG(LS(LC(R)))  &kp LG(LC(LS(T)))  &kp LG(LS(NUMBER_4))                                      &kp LG(LS(LC(NUMBER_4)))  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp ASTERISK   &kp PIPE
+&trans  &kp LEFT_SHIFT     &kp LEFT_COMMAND   &kp LEFT_CONTROL  &kp LC(F)          &kp LC(LG(LS(G)))  &kp LA(LC(LEFT))      &trans  &trans      &trans  &trans  &kp LC(LA(RIGHT))         &kp CARET         &kp UNDERSCORE        &kp EQUAL              &kp MINUS          &kp PLUS       &kp DOLLAR
+&trans  &kp LC(LA(ENTER))  &trans             &kp LG(LS(C))     &kp LG(LC(LS(V)))  &kp BACKSPACE                                    &trans      &trans                                    &kp AT_SIGN       &kp EXCLAMATION       &kp LESS_THAN          &kp GREATER_THAN   &kp AMPERSAND  &trans
+&trans  &trans             &trans             &trans            &trans                                &trans                &trans  &trans      &trans  &trans  &trans                                      &trans                &trans                 &trans             &trans         &trans
             >;
         };
 
