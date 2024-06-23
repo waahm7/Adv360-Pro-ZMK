@@ -66,11 +66,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 4                                                                                                 &mo 3      &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                                                  &none      &kp Y   &kp U     &kp I         &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none          &kp LEFT_COMMAND  &hm LEFT_ALT HOME         &hm RIGHT_ALT PAGE_UP    &kp RIGHT_COMMAND  &none      &kp H   &kp J     &kp K         &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                    &kp LEFT_CONTROL          &kp RIGHT_CONTROL                                      &kp N   &kp M     &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
-&mo 1      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &lt 2 DELETE      &hm LEFT_CONTROL END      &hm PG_DN RIGHT_CONTROL  &kp ENTER          &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo 1
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 4                                                                                                     &mo 3      &kp N6  &kp N7    &kp N8        &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                                                                      &none      &kp Y   &kp U     &kp I         &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none          &kp LEFT_COMMAND  &hm LEFT_ALT HOME         &hm RIGHT_ALT PAGE_UP    &kp RIGHT_COMMAND      &none      &kp H   &kp J     &kp K         &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                    &kp LEFT_CONTROL          &kp RIGHT_CONTROL                                          &kp N   &kp M     &kp COMMA     &kp DOT   &kp FSLH  &kp RSHFT
+&mo 1      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &lt 2 DELETE      &hm LEFT_CONTROL END      &hm PG_DN RIGHT_CONTROL  &hm RIGHT_SHIFT ENTER  &kp SPACE          &kp DOWN  &kp UP_ARROW  &kp LBKT  &kp RBKT  &mo 1
             >;
         };
 
