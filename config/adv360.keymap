@@ -66,11 +66,11 @@
 
         default_layer {
             bindings = <
-&none           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &none                                                                                        &mo 3      &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
-&kp TAB         &kp Q            &kp W            &kp E            &kp R            &kp T            &none                                                                                        &none      &kp Y            &kp U            &kp I            &kp O            &kp P            &kp BSLH
-&kp ESC         &kp A            &kp S            &kp D            &kp F            &kp G            &none          &kp LEFT_CONTROL  &kp LEFT_ALT          &kp RIGHT_ALT      &kp RIGHT_CONTROL  &none      &kp H            &kp J            &kp K            &kp L            &kp SEMI         &kp SQT
-&kp LEFT_SHIFT  &kp Z            &kp X            &kp C            &kp V            &kp B                                             &kp LEFT_COMMAND      &kp RIGHT_COMMAND                                &kp N            &kp M            &kp COMMA        &kp DOT          &kp FSLH         &kp RIGHT_SHIFT
-&sl 1           &none            &none            &kp LEFT         &kp RIGHT                         &kp BACKSPACE  &mo 2             &kp RG(LS(C))         &kp RG(SPACE)      &kp ENTER          &kp SPACE                   &kp DOWN         &kp UP_ARROW     &none            &none            &sl 1
+&none           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp NUMBER_3  &kp KP_NUMBER_4  &kp N5  &none                                                                                        &mo 3      &kp KP_NUMBER_6  &kp N7    &kp N8        &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
+&kp TAB         &kp Q            &kp W            &kp E         &kp R            &kp T   &none                                                                                        &none      &kp Y            &kp U     &kp I         &kp O            &kp P            &kp BSLH
+&kp ESC         &kp A            &kp S            &kp D         &kp F            &kp G   &none          &kp LEFT_CONTROL  &kp LEFT_ALT          &kp RIGHT_ALT      &kp RIGHT_CONTROL  &none      &kp H            &kp J     &kp K         &kp L            &kp SEMI         &kp SQT
+&kp LEFT_SHIFT  &kp Z            &kp X            &kp C         &kp V            &kp B                                    &kp LEFT_COMMAND      &kp RIGHT_COMMAND                                &kp N            &kp M     &kp COMMA     &kp DOT          &kp FSLH         &kp RIGHT_SHIFT
+&sl 1           &none            &none            &kp LEFT      &kp RIGHT                &kp BACKSPACE  &mo 2             &kp RG(LS(C))         &kp RG(SPACE)      &kp ENTER          &kp SPACE                   &kp DOWN  &kp UP_ARROW  &none            &none            &sl 1
             >;
         };
 
@@ -86,11 +86,11 @@
 
         personal {
             bindings = <
-&trans        &trans           &none                     &none              &none              &none              &trans                                                    &trans             &kp GRAVE         &kp AMPERSAND         &kp STAR               &kp TILDE          &trans        &trans
-&trans        &trans           &kp LG(LC(LS(W)))         &kp LG(LC(LS(E)))  &kp LG(LS(LC(R)))  &kp LG(LS(LC(T)))  &kp LG(LS(NUMBER_4))                                      &kp LC(LA(ENTER))  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp PLUS      &kp PIPE
-&kp LC(X)     &kp CARET        &kp EQUAL                 &kp UNDER          &kp MINUS          &kp LC(LG(LS(G)))  &kp LA(LC(LEFT))      &trans  &trans      &trans  &trans  &kp LC(LA(RIGHT))  &kp LEFT          &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT          &kp COLON     &kp DOUBLE_QUOTES
-&kp LEFT_ALT  &kp EXCLAMATION  &kp AT_SIGN               &kp HASH           &kp DOLLAR         &kp PERCENT                                      &trans      &trans                             &kp RIGHT_BRACE   &kp LEFT_BRACE        &kp LESS_THAN          &kp GREATER_THAN   &kp QUESTION  &trans
-&trans        &trans           &kp LC(LG(LS(NUMBER_4)))  &trans             &trans                                &trans                &trans  &trans      &trans  &trans  &trans                               &trans                &trans                 &trans             &trans        &trans
+&trans        &trans             &none                     &none              &none              &none              &trans                                                    &trans             &kp EXCLAMATION   &kp AMPERSAND         &kp STAR               &trans             &trans       &trans
+&trans        &trans             &kp LG(LC(LS(W)))         &kp LG(LC(LS(E)))  &kp LG(LS(LC(R)))  &kp LG(LS(LC(T)))  &kp LG(LS(NUMBER_4))                                      &kp LC(LA(ENTER))  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp PLUS     &kp PIPE
+&trans        &kp CARET          &kp EQUAL                 &kp UNDER          &kp MINUS          &kp LC(LG(LS(G)))  &kp LA(LC(LEFT))      &trans  &trans      &trans  &trans  &kp LC(LA(RIGHT))  &kp LEFT          &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT          &kp DOLLAR   &kp DOUBLE_QUOTES
+&kp LEFT_ALT  &kp LS(LG(SPACE))  &kp LC(X)                 &trans             &trans             &trans                                           &trans      &trans                             &kp TILDE         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE          &kp AT_SIGN  &trans
+&trans        &trans             &kp LC(LG(LS(NUMBER_4)))  &trans             &trans                                &trans                &trans  &trans      &trans  &trans  &trans                               &trans                &trans                 &trans             &trans       &trans
             >;
         };
 
