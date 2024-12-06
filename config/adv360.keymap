@@ -19,43 +19,8 @@
 
         #endif
 
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
 
-        hml: hml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MODS_LEFT";
-            bindings = <&kp>, <&kp>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <29 30 31 32 35 36 52 65 66 67 0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 46 47 48 49 50 51 60 61 62 63 64>;
-        };
-
-        hmr: hmr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOME_ROW_MODS_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 53 54 55 56 57 58 59 68 69 70 71 72 73 74 75 37>;
-        };
     };
 
     macros {
@@ -66,12 +31,12 @@
 
         default_layer {
             bindings = <
-&none           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp NUMBER_3  &kp KP_NUMBER_4  &kp N5  &none                                                                                        &mo 3      &kp KP_NUMBER_6  &kp N7      &kp N8     &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
-&kp TAB         &kp Q            &kp W            &kp E         &kp R            &kp T   &none                                                                                        &none      &kp Y            &kp U       &kp I      &kp O            &kp P            &kp BSLH
-&kp ESCAPE      &kp A            &kp S            &kp D         &kp F            &kp G   &none          &kp LEFT_CONTROL  &kp LEFT_ALT          &kp RIGHT_ALT      &kp RIGHT_CONTROL  &none      &kp H            &kp J       &kp K      &kp L            &kp SEMI         &kp SQT
-&kp LEFT_SHIFT  &kp Z            &kp X            &kp C         &kp V            &kp B                                    &kp LEFT_COMMAND      &kp RIGHT_COMMAND                                &kp N            &kp M       &kp COMMA  &kp DOT          &kp FSLH         &kp RIGHT_SHIFT
-&sl 1           &none            &none            &none         &none                    &kp BACKSPACE  &mo 2             &kp RG(LS(C))         &kp RG(SPACE)      &kp ENTER          &kp SPACE                   &kp DELETE  &none      &none            &none            &sl 1
-            >;
+&none           &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp NUMBER_3  &kp KP_NUMBER_4  &kp N5  &none                                                                                           &mo 3      &kp KP_NUMBER_6  &kp N7      &kp N8     &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
+&kp TAB         &kp Q            &kp W            &kp E         &kp R            &kp T   &none                                                                                           &none      &kp Y            &kp U       &kp I      &kp O            &kp P            &kp BSLH
+&kp ESCAPE      &kp A            &kp S            &kp D         &kp F            &kp G   &none          &kp LEFT_CONTROL  &kp LEFT_ALT          &kp RIGHT_ALT      &kp RIGHT_CONTROL     &none      &kp H            &kp J       &kp K      &kp L            &kp SEMI         &kp SQT
+&kp LEFT_SHIFT  &kp Z            &kp X            &kp C         &kp V            &kp B                                    &kp LEFT_COMMAND      &kp RIGHT_COMMAND                                   &kp N            &kp M       &kp COMMA  &kp DOT          &kp FSLH         &kp RIGHT_SHIFT
+&sl 1           &none            &none            &none         &none                    &kp BACKSPACE  &mo 2             &kp RG(LS(C))         &kp RG(SPACE)      &mt LEFT_SHIFT ENTER  &kp SPACE                   &kp DELETE  &none      &none            &none            &sl 1
+>;
         };
 
         fn {
@@ -81,7 +46,7 @@
 &kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none   &trans  &trans      &trans  &trans  &none   &kp F6  &kp F7  &kp F8  &kp F9   &kp F10  &kp F11
 &trans   &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
 &trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
-            >;
+>;
         };
 
         personal {
@@ -91,7 +56,7 @@
 &trans        &kp CARET  &kp EQUAL                 &kp UNDER          &kp MINUS          &kp LC(LG(LS(G)))  &kp LA(LC(LEFT))      &trans  &trans      &trans  &trans  &kp LC(LA(RIGHT))  &kp LEFT          &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT          &kp DOLLAR   &trans
 &kp LEFT_ALT  &trans     &kp LS(LG(SPACE))         &kp LG(C)          &kp LG(V)          &trans                                           &trans      &trans                             &kp TILDE         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE          &kp AT_SIGN  &trans
 &trans        &trans     &kp LC(LG(LS(NUMBER_4)))  &trans             &trans                                &trans                &trans  &trans      &trans  &trans  &trans                               &trans                &trans                 &trans             &trans       &trans
-            >;
+>;
         };
 
         mod {
@@ -101,7 +66,7 @@
 &none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
-            >;
+>;
         };
 
         keypad {
@@ -111,7 +76,7 @@
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
 &mo 1      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 1
-            >;
+>;
         };
     };
 };
