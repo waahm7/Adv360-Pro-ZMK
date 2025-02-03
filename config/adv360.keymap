@@ -10,17 +10,10 @@
       #include "version.dtsi"
       #ifndef VERSION_MACRO
 
-        macro_ver: macro_ver {
-            compatible = "zmk,behavior-macro";
-            label = "macro_version";
-            #binding-cells = <0>;
-            bindings = <&kp RET>;
-        };
-
         receipt_macro: receipt_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(M) &kp LS(S) &kp LS(C) &kp N2 &kp N4 &kp N9 &kp N0 &kp N4 &kp N2 &kp N9 &kp N1 &kp N3 &kp N3>;
+            bindings = <&kp LS(M) &kp LS(S) &kp LS(C) &kp N2 &kp N4 &kp N9 &kp N0 &kp N4 &kp N2 &kp N9 &kp N1 &kp N3 &kp N3>;
             label = "RECEIPT_MACRO";
         };
 
