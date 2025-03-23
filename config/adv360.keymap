@@ -30,7 +30,7 @@
         compatible = "zmk,combos";
 
         left_down_mouse {
-            bindings = <&mmv MOVE_LEFT MOVE_DOWN>;
+            bindings = <&mmv (-ZMK_POINTING_DEFAULT_MOVE_VAL) (-ZMK_POINTING_DEFAULT_MOVE_VAL)>;
             key-positions = <40 41>;
             layers = <3>;
         };
