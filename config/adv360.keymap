@@ -26,16 +26,6 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        left_down_mouse {
-            bindings = <&mmv (-ZMK_POINTING_DEFAULT_MOVE_VAL) (-ZMK_POINTING_DEFAULT_MOVE_VAL)>;
-            key-positions = <40 41>;
-            layers = <3>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
