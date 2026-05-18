@@ -42,11 +42,11 @@
 
         personal {
             bindings = <
-&trans           &trans            &none                 &none              &none              &none              &trans                                                        &trans                 &trans            &trans                &trans                 &trans             &trans         &trans
-&trans           &kp HASH          &kp LG(LC(LS(W)))     &kp LG(LC(LS(E)))  &kp LG(LS(LC(R)))  &kp LG(LS(LC(T)))  &kp LG(LS(LC(NUMBER_4)))                                      &kp LC(LA(UP_ARROW))   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp PLUS       &trans
-&kp CARET        &kp PERCENT       &kp EQUAL             &kp UNDER          &kp MINUS          &kp LC(LG(LS(G)))  &kp LA(LC(LG(LEFT)))      &trans  &trans      &trans  &trans  &kp LC(LA(LG(RIGHT)))  &kp LEFT          &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT          &kp LG(LS(C))  &kp DOLLAR
-&kp EXCLAMATION  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)      &kp LG(NUMBER_3)   &kp LG(NUMBER_4)   &kp AT_SIGN                                          &trans      &trans                                 &kp AMPERSAND     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE          &kp ASTERISK   &kp TILDE
-&trans           &trans            &kp LG(LS(NUMBER_4))  &trans             &trans                                &trans                    &trans  &trans      &trans  &trans  &kp LC(LA(SPACE))                        &kp LA(LEFT_ARROW)    &kp LA(RIGHT_ARROW)    &trans             &trans         &trans
+&trans           &trans            &none                 &none              &none              &none              &trans                                                        &trans             &trans            &trans                &trans                 &trans             &trans         &trans
+&trans           &kp HASH          &kp LG(LC(LS(W)))     &kp LG(LC(LS(E)))  &kp LG(LS(LC(R)))  &kp LG(LS(LC(T)))  &kp LG(LS(LC(NUMBER_4)))                                      &kp LC(LA(ENTER))  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp PLUS       &trans
+&kp CARET        &kp PERCENT       &kp EQUAL             &kp UNDER          &kp MINUS          &kp LC(LG(LS(G)))  &kp LA(LC(LEFT))          &trans  &trans      &trans  &trans  &kp LC(LA(RIGHT))  &kp LEFT          &kp DOWN_ARROW        &kp UP_ARROW           &kp RIGHT          &kp LG(LS(C))  &kp DOLLAR
+&kp EXCLAMATION  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)      &kp LG(NUMBER_3)   &kp LG(NUMBER_4)   &kp AT_SIGN                                          &trans      &trans                             &kp AMPERSAND     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE          &kp ASTERISK   &kp TILDE
+&trans           &trans            &kp LG(LS(NUMBER_4))  &trans             &trans                                &trans                    &trans  &trans      &trans  &trans  &kp LC(LA(SPACE))                    &kp LA(LEFT_ARROW)    &kp LA(RIGHT_ARROW)    &trans             &trans         &trans
             >;
         };
 
