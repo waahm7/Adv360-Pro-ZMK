@@ -1,0 +1,109 @@
+/*
+ * Opposite hand shift trainer, included inside the behaviors node of adv360.keymap.
+ *
+ * Left Shift only capitalizes keys typed by the right hand and Right Shift only
+ * capitalizes keys typed by the left hand. A guarded key sends nothing when the
+ * Shift on its own side is held and no rescue modifier is held. The rescue
+ * modifiers are the other Shift and every Cmd, Ctrl and Option key, so one handed
+ * shortcuts such as Cmd+Shift+Z keep working. Both Shift keys stay plain key
+ * presses, so Shift+click, Shift+Tab and Shift+arrows are not affected.
+ *
+ * Every guarded key gets two mod morph nodes. ohs_<key> sits in the keymap and
+ * checks for the Shift on the same side. Only when that Shift is held does it hand
+ * over to ohs_<key>_in, which types the key if a rescue modifier is held and sends
+ * nothing otherwise. keep mods equals mods everywhere, so no modifier is ever
+ * hidden from the host.
+ *
+ * Rules when editing:
+ * 1. A mod morph node tracks one press at a time, so every ohs_<key> node must be
+ *    bound at exactly one position on one layer. Add a new pair instead of reusing one.
+ * 2. The side comes from the MOD_LSFT and MOD_RSFT bits, not from where a key sits.
+ *    Keep LEFT_SHIFT on the left half and RIGHT_SHIFT on the right half, and move a
+ *    key between OHS_LEFT_HAND and OHS_RIGHT_HAND if it changes halves.
+ */
+
+#include <dt-bindings/zmk/keys.h>
+
+#define OHS_CMD_CTRL_OPT (MOD_LGUI | MOD_RGUI | MOD_LCTL | MOD_RCTL | MOD_LALT | MOD_RALT)
+
+/* Object like macro, so the # of the binding cells property never sits inside a function like macro. */
+#define OHS_MOD_MORPH compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>
+
+#define OHS_KEY(node, keycode, same_side_shift, rescue_mods) \
+    node##_in: node##_in { \
+        OHS_MOD_MORPH; \
+        bindings = <&none>, <&kp keycode>; \
+        mods = <(rescue_mods)>; \
+        keep-mods = <(rescue_mods)>; \
+    }; \
+    node: node { \
+        OHS_MOD_MORPH; \
+        bindings = <&kp keycode>, <&node##_in>; \
+        mods = <(same_side_shift)>; \
+        keep-mods = <(same_side_shift)>; \
+    };
+
+/* Left hand key: Left Shift alone blocks it, Right Shift capitalizes it. */
+#define OHS_LEFT_HAND(node, keycode) OHS_KEY(node, keycode, MOD_LSFT, (MOD_RSFT | OHS_CMD_CTRL_OPT))
+
+/* Right hand key: Right Shift alone blocks it, Left Shift capitalizes it. */
+#define OHS_RIGHT_HAND(node, keycode) OHS_KEY(node, keycode, MOD_RSFT, (MOD_LSFT | OHS_CMD_CTRL_OPT))
+
+/* Base layer, left hand keys (positions 1 to 5, 15 to 19, 29 to 33, 47 to 51). */
+OHS_LEFT_HAND(ohs_1, NUMBER_1)
+OHS_LEFT_HAND(ohs_2, NUMBER_2)
+OHS_LEFT_HAND(ohs_3, NUMBER_3)
+OHS_LEFT_HAND(ohs_4, NUMBER_4)
+OHS_LEFT_HAND(ohs_5, N5)
+OHS_LEFT_HAND(ohs_q, Q)
+OHS_LEFT_HAND(ohs_w, W)
+OHS_LEFT_HAND(ohs_e, E)
+OHS_LEFT_HAND(ohs_r, R)
+OHS_LEFT_HAND(ohs_t, T)
+OHS_LEFT_HAND(ohs_a, A)
+OHS_LEFT_HAND(ohs_s, S)
+OHS_LEFT_HAND(ohs_d, D)
+OHS_LEFT_HAND(ohs_f, F)
+OHS_LEFT_HAND(ohs_g, G)
+OHS_LEFT_HAND(ohs_z, Z)
+OHS_LEFT_HAND(ohs_x, X)
+OHS_LEFT_HAND(ohs_c, C)
+OHS_LEFT_HAND(ohs_v, V)
+OHS_LEFT_HAND(ohs_b, B)
+
+/* Base layer, right hand keys (positions 8 to 12, 22 to 27, 40 to 45, 54 to 58). */
+OHS_RIGHT_HAND(ohs_6, NUMBER_6)
+OHS_RIGHT_HAND(ohs_7, N7)
+OHS_RIGHT_HAND(ohs_8, N8)
+OHS_RIGHT_HAND(ohs_9, N9)
+OHS_RIGHT_HAND(ohs_0, NUMBER_0)
+OHS_RIGHT_HAND(ohs_y, Y)
+OHS_RIGHT_HAND(ohs_u, U)
+OHS_RIGHT_HAND(ohs_i, I)
+OHS_RIGHT_HAND(ohs_o, O)
+OHS_RIGHT_HAND(ohs_p, P)
+OHS_RIGHT_HAND(ohs_bslh, BSLH)
+OHS_RIGHT_HAND(ohs_h, H)
+OHS_RIGHT_HAND(ohs_j, J)
+OHS_RIGHT_HAND(ohs_k, K)
+OHS_RIGHT_HAND(ohs_l, L)
+OHS_RIGHT_HAND(ohs_semi, SEMI)
+OHS_RIGHT_HAND(ohs_sqt, SQT)
+OHS_RIGHT_HAND(ohs_n, N)
+OHS_RIGHT_HAND(ohs_m, M)
+OHS_RIGHT_HAND(ohs_comma, COMMA)
+OHS_RIGHT_HAND(ohs_dot, DOT)
+OHS_RIGHT_HAND(ohs_fslh, FSLH)
+
+/* Numbers layer digits (positions 40 to 44 and 54 to 58), typed by the right hand.
+   Separate nodes from the base digits, so no node is ever shared by two positions. */
+OHS_RIGHT_HAND(ohs_num1, NUMBER_1)
+OHS_RIGHT_HAND(ohs_num2, NUMBER_2)
+OHS_RIGHT_HAND(ohs_num3, NUMBER_3)
+OHS_RIGHT_HAND(ohs_num4, NUMBER_4)
+OHS_RIGHT_HAND(ohs_num5, NUMBER_5)
+OHS_RIGHT_HAND(ohs_num6, NUMBER_6)
+OHS_RIGHT_HAND(ohs_num7, NUMBER_7)
+OHS_RIGHT_HAND(ohs_num8, NUMBER_8)
+OHS_RIGHT_HAND(ohs_num9, NUMBER_9)
+OHS_RIGHT_HAND(ohs_num0, NUMBER_0)
