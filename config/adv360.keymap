@@ -22,18 +22,18 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&none           &ohs_1  &ohs_2        &ohs_3            &ohs_4  &ohs_5  &none                                                                                &mo 5         &ohs_6  &ohs_7  &ohs_8      &ohs_9    &ohs_0     &none
+&none           &ohs_1  &ohs_2        &ohs_3            &ohs_4  &ohs_5  &none                                                                                &mo 6         &ohs_6  &ohs_7  &ohs_8      &ohs_9    &ohs_0     &none
 &kp TAB         &ohs_q  &ohs_w        &ohs_e            &ohs_r  &ohs_t  &kp LG(LA(D))                                                                        &kp C_MUTE    &ohs_y  &ohs_u  &ohs_i      &ohs_o    &ohs_p     &ohs_bslh
 &kp ESCAPE      &ohs_a  &ohs_s        &ohs_d            &ohs_f  &ohs_g  &kp C_VOL_DN   &kp LEFT_CONTROL  &none             &none          &kp RIGHT_COMMAND  &kp C_VOL_UP  &ohs_h  &ohs_j  &ohs_k      &ohs_l    &ohs_semi  &ohs_sqt
 &kp LEFT_SHIFT  &ohs_z  &ohs_x        &ohs_c            &ohs_v  &ohs_b                                   &kp LEFT_ALT      &kp RIGHT_ALT                                   &ohs_n  &ohs_m  &ohs_comma  &ohs_dot  &ohs_fslh  &kp RIGHT_SHIFT
-&trans          &none   &kp CAPSLOCK  &kp LEFT_COMMAND  &none           &kp BACKSPACE  &mo 2             &kp LC(B)         &kp LG(SPACE)  &kp ENTER          &kp SPACE             &mo 3   &none       &none     &none      &trans
+&trans          &none   &kp CAPSLOCK  &kp LEFT_COMMAND  &mo 4           &kp BACKSPACE  &mo 2             &kp LC(B)         &kp LG(SPACE)  &kp ENTER          &kp SPACE             &mo 3   &none       &none     &none      &trans
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                   &mo 4      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                   &mo 5      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
 &kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
 &kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
@@ -51,11 +51,21 @@
             >;
         };
 
+        cmd_numbers {
+            bindings = <
+&trans  &trans            &trans            &trans            &trans            &trans            &trans                                      &trans  &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &trans            &trans            &trans            &trans            &trans            &trans                                      &trans  &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &trans  &trans  &trans      &trans  &trans  &trans  &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &kp LG(NUMBER_6)  &kp LG(NUMBER_7)  &kp LG(NUMBER_8)  &kp LG(NUMBER_9)  &kp LG(NUMBER_0)                  &trans      &trans                  &trans     &trans     &trans     &trans     &trans     &trans
+&trans  &trans            &trans            &trans            &trans                              &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans     &trans     &trans     &trans
+            >;
+        };
+
         numbers {
             bindings = <
 &trans  &trans            &trans            &trans            &trans            &trans            &trans                                      &trans  &trans     &trans     &trans     &trans     &trans     &trans
 &trans  &trans            &trans            &trans            &trans            &trans            &trans                                      &trans  &trans     &trans     &trans     &trans     &trans     &trans
-&trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)  &trans  &trans  &trans      &trans  &trans  &trans  &ohs_num1  &ohs_num2  &ohs_num3  &ohs_num4  &ohs_num5  &trans
+&trans  &trans            &trans            &trans            &trans            &trans            &trans  &trans  &trans      &trans  &trans  &trans  &ohs_num1  &ohs_num2  &ohs_num3  &ohs_num4  &ohs_num5  &trans
 &trans  &trans            &trans            &trans            &trans            &trans                            &trans      &trans                  &ohs_num6  &ohs_num7  &ohs_num8  &ohs_num9  &ohs_num0  &trans
 &trans  &trans            &trans            &trans            &trans                              &trans  &trans  &trans      &trans  &trans  &trans             &trans     &trans     &trans     &trans     &trans
             >;
@@ -64,7 +74,7 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1   &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 5                                      &mo 4   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&kp F1   &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 6                                      &mo 5   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans   &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
 &kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none   &trans  &trans      &trans  &trans  &none   &kp F6  &kp F7  &kp F8  &kp F9   &kp F10  &kp F11
 &trans   &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
